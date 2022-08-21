@@ -1,0 +1,27 @@
+#!/bin/bash
+#PBS -N omp_mvv_amdahl
+#PBS -m abe
+#PBS -M dutka_bm
+#PBS -j oe
+#PBS -k n
+#PBS -l nodes=1:hammer:ppn=42
+#PBS -l walltime=3:00:00
+#
+#
+
+cd CSC435/bblas_starting
+
+echo -- PTHREAD ILS TESTING -- 
+
+hostname
+
+./sdriver 8000 1
+./sdriver 8000 2
+./sdriver 8000 3
+./sdriver 8000 4
+./sdriver 8000 5
+./sdriver 8000 6
+./sdriver 8000 7
+./sdriver 8000 8
+./sdriver 8000 9
+./sdriver 8000 10
